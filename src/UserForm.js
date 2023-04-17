@@ -6,9 +6,11 @@ function UserForm({onUserAdd}){
     const[email,setEmail] = useState('')
 
     const handleSubmit = (event) =>{
-        event.preventDefault()
+        event.preventDefault();
 
-        onUserAdd({name,email})
+        onUserAdd({name,email});
+        setEmail('');
+        setName('');
     }
 
     return <form onSubmit={handleSubmit}>
